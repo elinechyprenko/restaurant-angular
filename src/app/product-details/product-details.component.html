@@ -1,0 +1,60 @@
+<div *ngIf="(selectedProduct$ | async) as selectedProduct">
+  <div class="modal-background">
+    <div class="modal-content">
+      <i class="gg-close-r" (click)="closeClicked.emit()"></i>
+      <div class="modal-header">
+        <h2 class="modal__title">{{ selectedProduct.title }}</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image__block">
+          <img [src]="'http://localhost:3000/images/' + selectedProduct.image" alt="img" class="modal-menu__image" />
+        </div>
+        <hr />
+        <div class="modal-info__block">
+          <span class="modal__info">{{selectedProduct.info}}</span>
+        </div>
+        <hr />
+        <div class="modal-additions__block" *ngIf="selectedAdditions$ | async as additions">
+          <h4 class="modal-additions__title">Additions</h4>
+          <div class="modal__additions" *ngFor="let addition of additions">
+            <div class="additions-title__block">
+              <i class="add-additions" (click)="addAddition(addition)"></i>
+              <div class="additions__quantity" *ngIf="getQuantity(addition) >= 1">
+                <span>{{ getQuantity(addition) }}</span>
+                <i class="remove-additions" (click)="removeAdditions(addition)"></i>
+              </div>
+              <span class="modal-additions__description">{{
+                addition.addition_title
+                }}</span>
+            </div>
+            <span class="modal-additions__price">+ {{ addition.addition_price }} zl</span>
+          </div>
+        </div>
+        <hr />
+        <div class="quanity-product__block">
+          <i class="remove-product" (click)="removeProduct()"></i>
+          <span class="quantity_title">{{ quantityProduct$ | async }}</span>
+          <i class="add-product" (click)="addProduct()"></i>
+          <div class="btn-block">
+            <button class="add-to-cart" (click)="addToCart()">
+              Add to cart +{{ (allPrice$ | async)?.toFixed(2) }} zl
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="postData" class="modal-background" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-info">
+      <div class="modal-block">
+        <p class="modal__description">Added to cart</p>
+      </div>
+      <div class="modal-footer">
+        <a routerLink="/cart" class="btn btn__cart">Go to cart</a>
+        <a (click)="closeClicked.emit()" class="btn btn__menu">View menu</a>
+      </div>
+    </div>
+  </div>
+</div>

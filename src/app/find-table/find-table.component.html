@@ -1,0 +1,13 @@
+<div [formGroup]="formGroup">
+  <select class="select__people" *ngIf="peopleOptions$ | async as people" formControlName="people" name="people"
+    id="selectPeople" required>
+    <option *ngFor="let person of people" [value]="person.value">{{person.label}}</option>
+  </select>
+  <input class="select__date" formControlName="date" type="date" [min]="minDate$ | async" [max]="maxDate$ | async"
+    required>
+  <select class="select__time" *ngIf="hours$ | async as hours" formControlName="time" name="time" id="selectTime"
+    required>
+    <option *ngFor="let time of hours">{{time}}</option>
+  </select>
+  <button class="btn-find" [disabled]="!isFormValid()" (click)="findTable()">Find table</button>
+</div>
