@@ -29,13 +29,14 @@ Tasty Nook is a **full-stack web application** for a modern restaurant.
 
 ### Payments
 - [Stripe](https://stripe.com/)
-- 
+
 ## Development server
 
-Install dependencies for frontend: `npm install`
-Install dependencies for backend: `cd server` => `npm install`
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-Run the backend: `node server.js ` . This will start the Node.js/Express server (listening on `http://localhost:3000/` by default).
+- Install dependencies for frontend: `npm install`
+- Install dependencies for backend: `cd server` => `npm install`
+- Run the backend: `node server.js ` . This will start the Node.js/Express server (listening on `http://localhost:3000/` by default).
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
