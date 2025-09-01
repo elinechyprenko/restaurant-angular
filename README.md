@@ -17,8 +17,9 @@ Tasty Nook is a **full-stack web application** for a modern restaurant.
 ## 🛠️ Technologies Used
 
 ### Frontend
-- [Angular](https://angular.io/)  
-- [Bootstrap](https://getbootstrap.com/)
+- [Angular 17](https://angular.io/)  
+- [Bootstrap 5](https://getbootstrap.com/)
+- [RxJS 7.8](https://rxjs.dev/)
 
 ### Backend
 - [Node.js](https://nodejs.org/)  
