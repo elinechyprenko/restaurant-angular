@@ -14,6 +14,7 @@ Tasty Nook is a **full-stack web application** for a modern restaurant.
 - **User dashboard**: Manage personal data, orders, and bookings  
 - **Payment integration**: Secure payments via **Stripe**
 
+
 ## 🛠️ Technologies Used
 
 ### Frontend
@@ -30,6 +31,30 @@ Tasty Nook is a **full-stack web application** for a modern restaurant.
 
 ### Payments
 - [Stripe](https://stripe.com/)
+
+## 🎬 Application Overview
+
+### Part 1 — Homepage & Registration
+- Homepage overview  
+- Registration form validation
+
+![Part1](https://github.com/elinechyprenko/restaurant-angular/blob/master/first%20part.mp4)
+
+### Part 2 — Ordering Workflow
+- User login  
+- Adding items to the cart  
+- On-site ordering process  
+- Payment flow
+
+![Part2](https://github.com/elinechyprenko/restaurant-angular/blob/master/second%20part.mp4)
+
+### Part 3 — User Profile & Group Dining
+- Profile dashboard overview  
+- Password update functionality  
+- Group dining feature
+
+![Part2](https://github.com/elinechyprenko/restaurant-angular/blob/master/third%20part.mp4)
+
 
 ## Development server
 
