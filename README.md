@@ -53,7 +53,7 @@ Tasty Nook is a **full-stack web application** for a modern restaurant.
 - Password update functionality  
 - Group dining feature
 
-![Part2](https://github.com/elinechyprenko/restaurant-angular/blob/master/third%20part.mp4)
+![Part3](https://github.com/elinechyprenko/restaurant-angular/blob/master/third%20part.mp4)
 
 
 ## Development server
